@@ -1,0 +1,171 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="FqERqaf0E1wWZYo47UHB">
+    <mxGraphModel dx="1790" dy="1893" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="ProjectScanner" vertex="1">
+          <mxGeometry height="306" width="580" x="920" y="323" as="geometry">
+            <mxRectangle height="30" width="180" x="360" y="510" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-2" parent="NTZjytt-JD2xqf4mm6IL-1" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="-&amp;nbsp;RootPath:&amp;nbsp;filesystem::path&lt;br&gt;- Files: vector&amp;lt;FileInfo&amp;gt;&lt;br&gt;- ExactNames: unordered_set&amp;lt;std::string&amp;gt;&lt;br&gt;- ExactExtensions: unordered_set&amp;lt;std::string&amp;gt;" vertex="1">
+          <mxGeometry height="90" width="580" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-3" parent="NTZjytt-JD2xqf4mm6IL-1" style="line;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="" vertex="1">
+          <mxGeometry height="40" width="580" y="116" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-4" parent="NTZjytt-JD2xqf4mm6IL-1" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="-&amp;nbsp;LoadIgnoreFile(string &amp;amp;FileName):&amp;nbsp;void&lt;br&gt;- GlobToRegex(string &amp;amp;pattern) : void&lt;br&gt;- InitDefaultFallbacks() : void&lt;br&gt;- IsIgnoredPath(filesystem::directory_entry &amp;amp;path) : void&lt;br&gt;+ ProjectScanner(const std::string &amp;amp;path) : void&lt;br&gt;+ scan() : void&lt;br&gt;+ getFiles() : vector&amp;lt;FileInfo&amp;gt;" vertex="1">
+          <mxGeometry height="150" width="580" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-63" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" target="NTZjytt-JD2xqf4mm6IL-22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-9" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;textShadow=0;fontColor=light-dark(#000000,#D5E8D4);html=1;convertToSvg=0;" value="enum Language" vertex="1">
+          <mxGeometry height="180" width="180" x="1430" y="-280" as="geometry">
+            <mxRectangle height="30" width="220" x="1470" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-11" parent="NTZjytt-JD2xqf4mm6IL-9" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;labelBorderColor=none;fontColor=light-dark(#000000,#D5E8D4);labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="C&lt;br&gt;Cpp&lt;br&gt;Java&lt;br&gt;Python&lt;br&gt;JavaScript&lt;br&gt;TypeScript&lt;br&gt;Unknown" vertex="1">
+          <mxGeometry height="150" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-56" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" target="NTZjytt-JD2xqf4mm6IL-52" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-57" connectable="0" parent="NTZjytt-JD2xqf4mm6IL-56" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="יורש" vertex="1">
+          <mxGeometry height="30" relative="1" width="50" x="-0.0315" y="2" as="geometry">
+            <mxPoint x="-25" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-14" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;br&gt;IFileAnalyzer&lt;br&gt;&lt;br&gt;+ analyze(FileInfo&amp;amp; file): FileAnalysis&lt;br&gt;" vertex="1">
+          <mxGeometry height="90" width="290" x="205" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-70" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;strokeColor=light-dark(#000000,#FF0000);" target="NTZjytt-JD2xqf4mm6IL-1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-22" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;textShadow=0;fontColor=light-dark(#000000,#D5E8D4);html=1;convertToSvg=0;" value="struct FileInfo" vertex="1">
+          <mxGeometry height="120" width="230" x="1280" y="-70" as="geometry">
+            <mxRectangle height="30" width="220" x="1470" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-23" parent="NTZjytt-JD2xqf4mm6IL-22" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;labelBorderColor=none;fontColor=light-dark(#000000,#D5E8D4);labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="int id&lt;br&gt;filesystem::path path&lt;br&gt;Language language&lt;br&gt;FileKind kind" vertex="1">
+          <mxGeometry height="90" width="230" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-61" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" target="NTZjytt-JD2xqf4mm6IL-32" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-24" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;textShadow=0;fontColor=light-dark(#000000,#D5E8D4);html=1;convertToSvg=0;" value="enum DependencyKind&lt;br&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="-330" y="-290" as="geometry">
+            <mxRectangle height="30" width="220" x="1470" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-25" parent="NTZjytt-JD2xqf4mm6IL-24" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;labelBorderColor=none;fontColor=light-dark(#000000,#D5E8D4);labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="LocalFile&lt;br&gt;ExternalPackage&lt;br&gt;SystemDependency&lt;br&gt;Unknown" vertex="1">
+          <mxGeometry height="90" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-58" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" target="NTZjytt-JD2xqf4mm6IL-34" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-30" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;textShadow=0;fontColor=light-dark(#000000,#D5E8D4);html=1;convertToSvg=0;" value="struct DockerRequirement&lt;br&gt;" vertex="1">
+          <mxGeometry height="80" width="290" x="-51" y="-130" as="geometry">
+            <mxRectangle height="30" width="220" x="1470" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-31" parent="NTZjytt-JD2xqf4mm6IL-30" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;labelBorderColor=none;fontColor=light-dark(#000000,#D5E8D4);labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="DockerRequirementType type&lt;br&gt;string value&lt;br&gt;" vertex="1">
+          <mxGeometry height="50" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-59" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" target="NTZjytt-JD2xqf4mm6IL-34" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-32" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;textShadow=0;fontColor=light-dark(#000000,#D5E8D4);html=1;convertToSvg=0;" value="struct DependencyReference" vertex="1">
+          <mxGeometry height="80" width="220" x="-330" y="-130" as="geometry">
+            <mxRectangle height="30" width="220" x="1470" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-33" parent="NTZjytt-JD2xqf4mm6IL-32" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;labelBorderColor=none;fontColor=light-dark(#000000,#D5E8D4);labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="string value&lt;br&gt;DependencyKind kind&lt;br&gt;" vertex="1">
+          <mxGeometry height="50" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-73" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;strokeColor=light-dark(#000000,#FF0000);" target="NTZjytt-JD2xqf4mm6IL-48" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-34" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;textShadow=0;fontColor=light-dark(#000000,#D5E8D4);html=1;convertToSvg=0;" value="struct FileAnalysis" vertex="1">
+          <mxGeometry height="100" width="510" x="-330" y="-10" as="geometry">
+            <mxRectangle height="30" width="220" x="1470" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-35" parent="NTZjytt-JD2xqf4mm6IL-34" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;labelBorderColor=none;fontColor=light-dark(#000000,#D5E8D4);labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="int fileId&lt;br&gt;vector&amp;lt;DependencyReference&amp;gt; dependencies&lt;br&gt;vector&amp;lt;DockerRequirement&amp;gt; dockerRequirements&lt;br&gt;" vertex="1">
+          <mxGeometry height="70" width="510" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-60" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" target="NTZjytt-JD2xqf4mm6IL-30" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-36" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;textShadow=0;fontColor=light-dark(#000000,#D5E8D4);html=1;convertToSvg=0;" value="enum DockerRequirementType&lt;br&gt;" vertex="1">
+          <mxGeometry height="160" width="260" x="-21" y="-320" as="geometry">
+            <mxRectangle height="30" width="220" x="1470" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-37" parent="NTZjytt-JD2xqf4mm6IL-36" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;labelBorderColor=none;fontColor=light-dark(#000000,#D5E8D4);labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="Package&lt;br&gt;Port&lt;br&gt;EnvironmentVariable&lt;br&gt;NetworkCapability&lt;br&gt;RuntimeLibrary&lt;br&gt;Unknown&lt;br&gt;" vertex="1">
+          <mxGeometry height="130" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-64" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" target="NTZjytt-JD2xqf4mm6IL-22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-38" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;textShadow=0;fontColor=light-dark(#000000,#D5E8D4);html=1;convertToSvg=0;" value="enum FileKind" vertex="1">
+          <mxGeometry height="160" width="250" x="1120" y="-260" as="geometry">
+            <mxRectangle height="30" width="220" x="1470" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-39" parent="NTZjytt-JD2xqf4mm6IL-38" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;labelBorderColor=none;fontColor=light-dark(#000000,#D5E8D4);labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="Source&lt;br&gt;Header&lt;br&gt;BuildConfiguration&lt;br&gt;DependencyConfiguration&lt;br&gt;DockerConfiguration&lt;br&gt;Unknown" vertex="1">
+          <mxGeometry height="130" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-65" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=1 1;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;strokeColor=light-dark(#000000,#FFFFFF);" target="NTZjytt-JD2xqf4mm6IL-48" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-69" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=1 1;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" target="NTZjytt-JD2xqf4mm6IL-1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-41" collapsed="1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="main" vertex="1">
+          <mxGeometry height="56" width="280" x="620" y="190" as="geometry">
+            <mxRectangle height="56" width="280" x="420" y="860" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-44" parent="NTZjytt-JD2xqf4mm6IL-41" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;fillColor=none;" value="+ main(&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre; color: rgb(255, 123, 114);&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;background-color: rgb(18, 19, 20); color: rgb(187, 190, 191); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre; color: rgb(255, 166, 87);&quot;&gt;argc&lt;/span&gt;&lt;span style=&quot;background-color: rgb(18, 19, 20); color: rgb(187, 190, 191); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre; color: rgb(255, 123, 114);&quot;&gt;char&lt;/span&gt;&lt;span style=&quot;background-color: rgb(18, 19, 20); color: rgb(187, 190, 191); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre; color: rgb(86, 156, 214);&quot;&gt;*&lt;/span&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre; color: rgb(255, 166, 87);&quot;&gt;argv&lt;/span&gt;&lt;span style=&quot;background-color: rgb(18, 19, 20); color: rgb(187, 190, 191); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre;&quot;&gt;[]&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;) :&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 123, 114); background-color: rgb(18, 19, 20); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre;&quot;&gt;int&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-72" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=1 1;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" target="NTZjytt-JD2xqf4mm6IL-14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-48" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;fontFamily=Helvetica;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="ProjectAnalyzer" vertex="1">
+          <mxGeometry height="226" width="580" x="60" y="320" as="geometry">
+            <mxRectangle height="30" width="180" x="360" y="510" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-49" parent="NTZjytt-JD2xqf4mm6IL-48" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="- analyzers:&amp;nbsp;unordered_map&amp;lt;Language, std::unique_ptr&amp;lt;IFileAnalyzer&amp;gt;&amp;gt;&lt;br&gt;-&amp;nbsp;files: vector&amp;lt;FileInfo&amp;gt;&lt;br&gt;-&amp;nbsp;analysisResults:&amp;nbsp;vector&amp;lt; FileAnalysis &amp;gt;" vertex="1">
+          <mxGeometry height="70" width="580" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-50" parent="NTZjytt-JD2xqf4mm6IL-48" style="line;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="" vertex="1">
+          <mxGeometry height="40" width="580" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-51" parent="NTZjytt-JD2xqf4mm6IL-48" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="+ addFile(FileInfo&amp;amp; info) : void&lt;br&gt;+&amp;nbsp;analyzeAllFiles() :&amp;nbsp;void&lt;br&gt;+&amp;nbsp;getAnalysis(int id) :&amp;nbsp;FileAnalysis&amp;amp;&lt;br&gt;+&amp;nbsp;getAllAnalysis() :&amp;nbsp;vector&amp;lt; FileAnalysis&amp;amp;&amp;gt;" vertex="1">
+          <mxGeometry height="90" width="580" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-52" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;fontFamily=Helvetica;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="CppAnalyzer" vertex="1">
+          <mxGeometry height="186" width="200" x="-120" y="790" as="geometry">
+            <mxRectangle height="30" width="180" x="360" y="510" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-53" parent="NTZjytt-JD2xqf4mm6IL-52" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;" vertex="1">
+          <mxGeometry height="70" width="200" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-54" parent="NTZjytt-JD2xqf4mm6IL-52" style="line;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="" vertex="1">
+          <mxGeometry height="40" width="200" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-55" parent="NTZjytt-JD2xqf4mm6IL-52" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;" value="&lt;br&gt;&lt;br&gt;" vertex="1">
+          <mxGeometry height="50" width="200" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="NTZjytt-JD2xqf4mm6IL-71" edge="1" parent="1" source="NTZjytt-JD2xqf4mm6IL-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontColor=light-dark(#000000,#D5E8D4);labelBorderColor=none;labelBackgroundColor=none;textShadow=0;html=1;convertToSvg=0;strokeColor=light-dark(#000000,#FF0000);" target="NTZjytt-JD2xqf4mm6IL-48" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

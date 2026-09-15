@@ -1,15 +1,12 @@
-#include "../h_files/FilesScanner.hpp"
+#include "../h_files/ProjectScanner.hpp"
 #include <fstream>
 #include <string>
 #include <map>
 #include <filesystem>
 #include <vector>
-
-#include <iostream>
-
 #include "../../include/types.hpp"
 
-FilesScanner::FilesScanner(const std::string &Path)
+ProjectScanner::ProjectScanner(const std::string &Path)
 {
     RootPath = std::filesystem::path(Path);
     if (!std::filesystem::exists(RootPath) || !std::filesystem::is_directory(RootPath) || std::filesystem::is_block_file(RootPath))
@@ -23,8 +20,9 @@ FilesScanner::FilesScanner(const std::string &Path)
     LoadIgnoreFile(dockerignore);
 }
 
-void FilesScanner::scan()
+void ProjectScanner::scan()
 {
+    int counter = 0;
     for (const auto &entry : std::filesystem::recursive_directory_iterator(RootPath))
     {
         if (IsIgnoredPath(entry))
@@ -32,15 +30,31 @@ void FilesScanner::scan()
             continue;
         }
 
-        FileInfo Info;
-        Info.path = entry.path().string();
-        Info.extension = entry.path().extension().string();
-        Info.stem = entry.path().stem().string();
-        Files.push_back(Info);
+        std::string normalizedPath = entry.path().string();
+
+        int id = counter++;
+
+        FileInfo info;
+        info.id = id;
+        info.path = normalizedPath;
+        info.extension = entry.path().extension().string();
+        info.stem = entry.path().relative_path().string();
+        auto FileLang = ExtensionToLanguage.find(info.extension);
+        if (FileLang != ExtensionToLanguage.end())
+        {
+            info.lang = FileLang->second;
+        }
+        else
+        {
+            info.lang = Languages::Unknown;
+        }
+        IdToInfo.push_back(info);
+        PathToId[normalizedPath] = id;
+        Files.push_back(info);
     }
 }
 
-bool FilesScanner::IsIgnoredPath(const std::filesystem::directory_entry &path)
+bool ProjectScanner::IsIgnoredPath(const std::filesystem::directory_entry &path)
 {
     if (!path.exists() || !path.is_regular_file() && path.is_directory())
     {
@@ -78,7 +92,7 @@ bool FilesScanner::IsIgnoredPath(const std::filesystem::directory_entry &path)
     return false;
 }
 
-void FilesScanner::InitDefaultFallbacks()
+void ProjectScanner::InitDefaultFallbacks()
 {
     static const std::vector<std::string> defaults = {
         "*.git*", "*node_modules*", "*build*", "*dist*",
@@ -89,7 +103,7 @@ void FilesScanner::InitDefaultFallbacks()
     }
 }
 
-void FilesScanner::LoadIgnoreFile(std::string &FileName)
+void ProjectScanner::LoadIgnoreFile(std::string &FileName)
 {
     auto IgnorPath = RootPath / FileName;
     if (!std::filesystem::exists(IgnorPath) || std::filesystem::is_block_file(IgnorPath))
@@ -100,6 +114,11 @@ void FilesScanner::LoadIgnoreFile(std::string &FileName)
     std::string line;
     while (getline(file, line))
     {
+        size_t comment_pos = line.find("//");
+        if (comment_pos != std::string::npos)
+        {
+            line = line.substr(0, comment_pos);
+        }
         // Strip leading and trailing whitespace and ignore comments
         size_t first = line.find_first_not_of(" \t\r\n");
         // If the line is empty or a comment, skip it
@@ -114,7 +133,7 @@ void FilesScanner::LoadIgnoreFile(std::string &FileName)
     }
 }
 
-void FilesScanner::GlobToRegex(const std::string &pattern)
+void ProjectScanner::GlobToRegex(const std::string &pattern)
 {
     // Check for exact extension match for patterns like "*.ext" and add to ExactExtensions
     if (pattern.rfind("*.", 0) == 0 && pattern.find_first_of("*?/", 2) == std::string::npos)
@@ -175,7 +194,7 @@ void FilesScanner::GlobToRegex(const std::string &pattern)
     PatternRules.push_back(std::regex(regex_str, std::regex::icase));
 }
 
-const std::vector<FileInfo> FilesScanner::getFiles()
+const std::vector<FileInfo> ProjectScanner::getFiles()
 {
     return Files;
 }

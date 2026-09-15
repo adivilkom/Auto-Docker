@@ -6,4 +6,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(include)
 
-add_executable(Auto-Docker src/cpp_files/main.cpp)
+add_executable(Auto-Docker
+    src/cpp_files/main.cpp
+    src/cpp_files/FilesScanner.cpp
+    src/cpp_files/DependencyExtractorC_Cpp.cpp
+    src/cpp_files/DependencyResolverC_Cpp.cpp
+    include/types.hpp
+
+)

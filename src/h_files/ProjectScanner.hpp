@@ -8,14 +8,14 @@
 #include "../../include/types.hpp"
 
 /**
- * @class FilesScanner
+ * @class ProjectScanner
  *
  * @details This class is designed for high-performance file scanning. It uses a hybrid approach
  * for filtering: exact names and extensions are checked in O(1) time using hash sets, while
  * complex wildcard patterns fallback to a regex engine. It automatically respects files like
  * .gitignore and provides built-in defaults for common junk files.
  */
-class FilesScanner
+class ProjectScanner
 {
 private:
     std::filesystem::path RootPath;
@@ -72,7 +72,7 @@ public:
      *
      * @param path The absolute or relative path to the root directory to be scanned.
      */
-    explicit FilesScanner(const std::string &path);
+    explicit ProjectScanner(const std::string &path);
 
     /**
      * @details Iterates through all files and directories starting from RootPath.
